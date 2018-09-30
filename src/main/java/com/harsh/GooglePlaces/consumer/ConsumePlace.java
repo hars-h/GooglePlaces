@@ -23,14 +23,14 @@ public class ConsumePlace {
 
 	@Value("${app.key}")
 	static String key;
+	
 	private static final Logger logger = LoggerFactory.getLogger(ConsumePlace.class);
 	
 	public Place consumePlaceID(String name) {
 		Place place;
 		logger.info("Key value is : "+ key);
 		String inLine="";
-		try {
-			
+		try {		
 			URL url=new URL("https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input="+name+"&inputtype=textquery&key=AIzaSyAtfJTrmBGkUjvhw4NH6ML_VAvgJW0UM60");
 			HttpURLConnection conn = (HttpURLConnection)url.openConnection();
 			conn.setRequestMethod("GET");
