@@ -10,13 +10,13 @@ import com.harsh.GooglePlaces.model.Place;
 public class GooglePlacesApplicationTest {
 	ConsumePlace cp=new ConsumePlace();
 	Place place = new Place("Ranchi","ChIJ3bddqgTh9DkRPvSZaJ3UCdw");
-	Place cplace;
+	Place brplace;
 	@Test
 	public void TestPlaceID() {
-		cplace = cp.consumePlaceID("Ranchi");
+		brplace = cp.consumePlaceID("Ranchi");
 		System.out.println("Place : "+place);
-		System.out.println("cPlace : "+cplace);
-		assertEquals(place.toString(),cplace.toString());
+		System.out.println("brPlace : "+brplace);
+		assertEquals(place.toString(),brplace.toString());
 	}
 
 }
